@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ProjectAdapter(val context: Context, val cats: List<Project>) :
+class ProjectAdapter(val context: Context, val projects: List<Project>) :
     RecyclerView.Adapter<ProjectAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -17,11 +17,11 @@ class ProjectAdapter(val context: Context, val cats: List<Project>) :
     }
 
     override fun getItemCount(): Int {
-        return cats.size
+        return projects.size
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(cats[position])
+        holder?.bind(projects[position])
     }
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {

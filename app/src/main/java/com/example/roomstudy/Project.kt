@@ -1,8 +1,8 @@
 package com.example.roomstudy
 
-import android.arch.persistence.room.ColumnInfo
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.PrimaryKey
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "project")
 class Project(@PrimaryKey(autoGenerate = true) var id: Long?,
@@ -13,5 +13,5 @@ class Project(@PrimaryKey(autoGenerate = true) var id: Long?,
               @ColumnInfo(name = "total-amount") var totalAmount: Int,
               @ColumnInfo(name = "deadline") var deadline: Int
 ){
-    constructor(): this(null,"", 0,0, 0, 0, 0)
+    constructor(): this(null,"", 0,0, 5, 10, 20221101)
 }
